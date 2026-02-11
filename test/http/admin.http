@@ -1,0 +1,21 @@
+@server=http://localhost:4004
+@service=/odata/v4/admin
+
+
+
+
+###
+GET {{server}}{{service}}/DesignVersions
+
+####
+GET {{server}}{{service}}/DesignVersions(7855939b-629a-4916-b20e-c871811f1918)?$expand=components
+
+#### 
+### Why is this not returning more than one elements
+GET {{server}}{{service}}/DesignVersions(7855939b-629a-4916-b20e-c871811f1918)?$expand=components($expand=units($expand=unit))
+
+####
+GET {{server}}{{service}}/StructureElements
+
+
+
